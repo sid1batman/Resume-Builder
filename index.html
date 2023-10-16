@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Generator</h1>
+        <form id="resumeForm">
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo"><br><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br><br>
+
+            <label for="summary">Summary:</label><br>
+            <textarea id="summary" name="summary" rows="4" cols="50"></textarea><br><br>
+
+            <h3>Education Details:</h3>
+            <div id="educationDetails">
+                <div class="education">
+                    <label for="degree">Degree:</label>
+                    <input type="text" placeholder="Degree" name="degree">
+                    <label for="address">University:</label> 
+                    <input type="text" placeholder="University" name="university">
+                    <label for="address">Year:</label> 
+                    <input type="text" placeholder="Year" name="year">
+                </div>
+            </div>
+
+            <!-- <button onclick="addEducation()">Add Education</button><br><br> -->
+
+            <h3>Skill Set:</h3>
+            <textarea id="skills" name="skills" placeholder="Skill Description" rows="4" cols="50"></textarea><br><br>
+
+            <h3>Project Details:</h3>
+            <div id="projectDetails">
+                <div class="project">
+                    <label for="projectTitle">Project Title:</label>
+                    <input type="text" placeholder="Project Name" name="projectName">
+                    <label for="projectTitle">Project Descriptoin:</label>
+                    <input type="text" placeholder="Project Description" name="projectDescription">
+                </div>
+            </div>
+
+            <!-- <button onclick="addProject()">Add Project</button><br><br> -->
+
+            <input type="submit" value="Generate Resume">
+        </form>
+
+        <div id="resume"></div>
+    </div>
+
+    <script src="https://unpkg.com/html2pdf.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
